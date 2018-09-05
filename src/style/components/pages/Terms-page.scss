@@ -1,0 +1,68 @@
+.agreement_and_policy_wrapper {
+  p {
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4 {
+    color: #2c2c2c;
+  }
+  .terms-title, .participation-title {
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  ol {
+    list-style-type: upper-roman;
+    font-size: 24px;
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    h4 {
+      font-size: 18px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .numbered {
+    list-style-type: decimal;
+    font-size: 18px;
+    margin-bottom: 20px;
+    li {
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .circle {
+    list-style-type: disc;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  strong {
+    font-weight: 700;
+    margin-right: 5px;
+  }
+  ul {
+    list-style-type: lower-latin;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 20px;
+    li {
+      margin-bottom: 15px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+branches:
+  include: [develop,release-*,master] 
+pipeline:
+
+########## #DEV-env# #####
+  ecr-dev:
+    image: plugins/ecr
+    registry: 005233678461.dkr.ecr.us-east-1.amazonaws.com
+    repo: 005233678461.dkr.ecr.us-east-1.amazonaws.com/core_frontend
+    secrets: [ecr_access_key, ecr_secret_key]
+    build_args:
+       - REACT_APP_ENV=development
+    when:
+        branch:  develop
+        event: push
+
+  core-frontend-dev:
+    image: peloton/drone-rancher
+    url: http://rancher.artifacts.ai:8080
+    secrets: [rancher_access_key, rancher_secret_key]
+    service: Core-dev/frontend
+    timeout: 180
+    confirm: true
+    docker_image: 005233678461.dkr.ecr.us-east-1.amazonaws.com/core_frontend
+
+    start_first: false
+    when:
+        branch: develop
+        event: push
+############################
+
+######## #STAGING-env# #####
+  ecr-stage:
+    image: plugins/ecr
+    registry: 005233678461.dkr.ecr.us-east-1.amazonaws.com
+    repo: 005233678461.dkr.ecr.us-east-1.amazonaws.com/core_frontend
+    secrets: [ecr_access_key, ecr_secret_key]
+    tags:
+      - ${DRONE_BRANCH}
+    build_args:
+    - REACT_APP_ENV=stage
+
+    when:
+        branch:  release-*
+        event: push
+
+  core-frontend-stage:
+    image: peloton/drone-rancher
+    url: http://rancher.artifacts.ai:8080
+    secrets: [rancher_access_key, rancher_secret_key]
+    service: Core-stage/frontend
+    timeout: 180
+    confirm: true
+    docker_image: 005233678461.dkr.ecr.us-east-1.amazonaws.com/core_frontend:${DRONE_BRANCH}
+
+    start_first: false
+    when:
+        branch: release-*
+        event: push
+#############################
+
+#############################
+#        Notification       #
+#############################
+
+  slack:
+    image: plugins/slack
+    webhook: https://hooks.slack.com/services/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
+    channel: drone-ci
+    template: >
+      {{#success build.status}}
+        --------------------
+        Repo: {{ repo.name }}
+        Author: {{build.author}}
+        Number: {{build.number}}
+        Status: success
+        Link: {{build.link}}
+        --------------------
+      {{else}}
+        --------------------
+        Repo: {{ repo.name }}
+        Author: @{{build.author}}
+        Number: {{build.number}}
+        Status: failure
+        Link: {{build.link}}
+        --------------------
+      {{/success}}
+    when:
+      status: [ success, failure ]
+      when: [release-*, master, develop]
+####
+####   

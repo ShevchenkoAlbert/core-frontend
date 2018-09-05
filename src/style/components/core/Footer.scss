@@ -1,0 +1,19 @@
+.Footer {
+  position: absolute;
+  bottom: 24px;
+  left: 0px;
+  align-self: flex-end;
+  max-width: 100%;
+  font-size: 11px;
+  line-height: 1.18;
+  text-align: left;
+  font-family: Roboto;
+  color: rgb(123, 129, 128);
+
+  a {
+    font-family: Raleway;
+    color: rgb(44, 44, 44);
+    font-weight: 300;
+    margin: 0 0 0 4px;
+  }
+}

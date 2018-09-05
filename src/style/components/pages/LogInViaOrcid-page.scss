@@ -1,0 +1,25 @@
+.LogInViaOrcid-page-wrapper {
+
+  .auth__formSide_highlightText {
+    color: #a6ce39;
+  }
+
+  .auth__formSide_title {
+    &:after {
+      background: #a6ce39;
+    }
+  }
+
+  .auth__checkPrivacy_text {
+    a {
+      color: #96b542;
+    }
+  }
+
+  .auth__checkPrivacy_checkboxUI {
+    &::before ,
+    &:after {
+      background: #87a92c;
+    }
+  }
+}

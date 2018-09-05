@@ -1,0 +1,43 @@
+
+@import '_reset.scss';
+
+@import '_fonts.scss';
+@import './icomoon/style.scss';
+
+
+@import '_mixins.scss';
+@import '_animation.scss';
+
+@import 'common.scss';
+
+
+
+@import './components/core/CoreLoyaut.scss';
+@import './components/core/Footer.scss';
+@import './components/core/ComingSoon.scss';
+@import './components/core/Bubble.scss';
+
+@import './components/form/InputField.scss';
+@import './components/core/FixedPanel.scss';
+@import './components/common/GradientButton';
+@import './components/common/ArrowButton';
+@import './components/core/ProfileImage.scss';
+@import './components/common/Button.scss';
+@import './components/auth/auth-loyaut.scss';
+@import './components/auth/PasswordValidationInfo.scss';
+@import './components/NotificationMessage/NotificationMessageStatic.scss';
+@import './components/core/sidebar.scss';
+@import './components/core/DashboardInfoItem.scss';
+
+
+@import './components/pages/login-page.scss';
+@import './components/pages/LogInViaOrcid-page.scss';
+@import './components/pages/ForgotPassword-page.scss';
+@import './components/pages/Terms-page.scss';
+@import './components/core/DashboardContent.scss';
+@import './components/core/ArtifactsPage.scss';
+@import './components/core/ProfilePage.scss';
+@import './components/core/ClaimArtifactsPopup.scss';
+@import './components/core/MyArtifacts.scss';
+@import './components/core/ProfileGeneral.scss';
+@import './components/pages/NotFound-page.scss';

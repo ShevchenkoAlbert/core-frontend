@@ -1,0 +1,38 @@
+.logIn-page-wrapper {
+
+  .auth__footer_inner {
+    flex-direction: column;
+
+    span {
+      display: block;
+      width: 100%;
+      position: relative;
+      padding: 0px 10px 0px;
+      margin: 25px 0px 17px;
+
+      &:after ,
+      &:before {
+        content: '';
+        width: 190px;
+        height: 1px;
+        background: #eaeaeb;
+        position: absolute;
+        top: 8px;
+
+        @media screen and (max-width: 480px) {
+          width: 40%;
+        }
+      }
+      &:before {
+        left: 0;
+      }
+      &:after {
+        right: 0;
+      }
+    }
+  }
+
+  .orcid-link {
+    width: 100%;
+  }
+}

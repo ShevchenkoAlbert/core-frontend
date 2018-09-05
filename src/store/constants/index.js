@@ -1,0 +1,52 @@
+export const AUTH_LOADER = 'AUTH_LOADER';
+export const SIGN_UP_CONFIRM_MAIL_MESSAGE = 'SIGN_UP_CONFIRM_MAIL_MESSAGE';
+export const SET_EMAIL = 'SET_EMAIL';
+export const HANDLE_CHECK_USER = 'HANDLE_CHECK_USER';
+export const SUCCESS_RECOVER_PASS_MSG = 'SUCCESS_RECOVER_PASS_MSG';
+export const SET_HASH_FOR_NEW_PASS = 'SET_HASH_FOR_NEW_PASS';
+export const SET_ORCID_DATA = 'SET_ORCID_DATA';
+export const SET_ORCID_CODE = 'SET_ORCID_CODE';
+export const HANDLE_ERROR_MSG_NEWPASS = 'HANDLE_ERROR_MSG_NEWPASS';
+export const SUCCESS_NEW_PASS_MSG = 'SUCCESS_NEW_PASS_MSG';
+export const regPass = /^(?=.*[a-z])(?=.*[A-Z])((?=.*\d)|(?=.*[@$!%*?&\-+`#"'~.{}<>=/\,:;^\\_\[\]\(\)]))[A-Za-z((\d)|(@$!%*?&\-+`#"'~.{}<>=/\,:;^\\_\[\]\(\)))]{8,}$/;
+export const oneLowerLetter = /[a-z]/;
+export const oneUpperLetter = /[A-Z]/;
+export const oneNumbOrSpecial = /((?=.*\d)|(?=.*[@$!%*?&\-+`#"'~.{}<>=/\,:;^\\_\[\]\(\)]))/;
+export const minLength = /[A-Za-z((\d)|(@$!%*?&\-+`#"'~.{}<>=/\,:;^\\_\[\]\(\)))]{8,}/;
+export const englishKeyboardLayout = /^[a-zA-Z0-9@$!%*?&\-+`#"'~.{}<>=/\,:;^\\_\[\]\(\)]*$/;
+
+export const CHANGE_SIDEBAR_VIEW = 'CHANGE_SIDEBAR_VIEW';
+export const SET_LINK_DATA = 'SET_LINK_DATA';
+
+export const CHANGE_DATE_FILTER_START = 'CHANGE_DATE_FILTER_START';
+export const CHANGE_DATE_FILTER_END = 'CHANGE_DATE_FILTER_END';
+export const CHANGE_DATE_RANGE_START = 'CHANGE_DATE_RANGE_START';
+export const CHANGE_DATE_RANGE_END = 'CHANGE_DATE_RANGE_END';
+
+export const SET_KEYWORDS_DATA = 'SET_KEYWORDS_DATA';
+export const SET_DASHBOARD_INFO_DATA = 'SET_DASHBOARD_INFO_DATA';
+export const SET_CHART_DATA = 'SET_CHART_DATA';
+
+export const FETCH_CLAIM_ARTIFACTS = 'FETCH_CLAIM_ARTIFACTS';
+export const FETCHING_CLAIM_ARTIFACTS_START = 'FETCHING_CLAIM_ARTIFACTS_START';
+export const FETCHING_CLAIM_ARTIFACTS_END = 'FETCHING_CLAIM_ARTIFACTS_END';
+export const SET_MY_CLAIMED_ARTIFACTS = 'SET_MY_CLAIMED_ARTIFACTS';
+export const UPDATE_ACTIVE_CLAIM_ARTIFACTS = 'UPDATE_ACTIVE_CLAIM_ARTIFACTS';
+export const CHANGE_POPUP_VIEW = 'CHANGE_POPUP_VIEW';
+export const SUBMIT_CLAIM_START = 'SUBMIT_CLAIM_START';
+export const SUBMIT_CLAIM_END = 'SUBMIT_CLAIM_END';
+export const RESET_POPUP_CHANGES = 'RESET_POPUP_CHANGES';
+export const START_LOADING = 'START_LOADING';
+export const STOP_LOADING = 'STOP_LOADING';
+export const SET_CITATIONS_DATA = 'SET_CITATIONS_DATA';
+export const SET_PROFILE_DATA = 'SET_PROFILE_DATA';
+export const SET_ERR_MSG_FOR_PASS = 'SET_ERR_MSG_FOR_PASS';
+export const SET_USER_PHOTO = 'SET_USER_PHOTO';
+export const HANDLE_CROP_PHOTO = 'HANDLE_CROP_PHOTO';
+export const SET_UPDATE_DATE = 'SET_UPDATE_DATE';
+export const SORT_TYPE = 'SORT_TYPE';
+export const SET_PAGE = 'SET_PAGE';
+export const CHECK_LOAD = 'CHECK_LOAD';
+export const CLEAR_MY_CLAIMED_ARTIFACTS= 'CLEAR_MY_CLAIMED_ARTIFACTS';
+export const SET_TOTAL_PAGES= 'SET_TOTAL_PAGES';
+export const SET_TOTAL_CLAIMED_ARTIFACTS= 'SET_TOTAL_CLAIMED_ARTIFACTS';

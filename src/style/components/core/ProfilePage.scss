@@ -1,0 +1,38 @@
+.ProfilePage {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__inner {
+    //padding: 50px 50px 0px;
+    padding: 20px 17px 0px;
+    flex: 1;
+    overflow: auto;
+  }
+
+
+  .custom-scroll .custom-scrollbar {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .custom-scroll .inner-handle {
+    margin-top: 0;
+    height: 100%;
+    background: #CAD5DA;
+    opacity: .5;
+    cursor : pointer;
+  }
+
+  .custom-scroll .inner-container {
+    // margin-right: -50px!important;
+
+    @media screen and (max-width: 1024px) {
+      margin: 0;
+    }
+  }
+
+  .content-wrapper {
+    padding: 0 33px 0;
+  }
+}

@@ -1,0 +1,593 @@
+.Dashboard {
+
+  &__header {}
+
+  &__title {}
+
+  &__date-filter {
+    padding: 6px 0;
+    position: relative;
+    display: inline-table;
+    margin: 10px 0 0 0;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+
+    &_list {
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      border: 1px solid #CAD5DA;
+      padding: 0 15px;
+      height: 30px;
+      font-size: 15px;
+      color: #8D8D8D;
+      font-weight: 500;
+      font-family: 'Raleway', sans-serif;
+
+      @media screen and (max-width: 768px) {
+        height: 20px;
+        font-size: 10px;
+        border-radius: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        padding: 0 3px;
+        justify-content: space-around;
+      }
+    }
+    &_item {
+      min-width: 100px;
+      padding: 0 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      cursor: pointer;
+      height: 100%;
+
+      @media screen and (max-width: 768px) {
+        min-width: 63px;
+      }
+
+      &.active {
+        background: linear-gradient(to top, #4FACFE, #03EFFE);
+        height: 40px;
+        font-weight: bold;
+        color: #fff;
+
+        @media screen and (max-width: 768px) {
+          height: 27px;
+        }
+      }
+    }
+
+    &_range {
+      border: 1px solid #CAD5DA;
+      border-radius: 5px;
+      width: 320px;
+      // height: 320px;
+      min-height: 382px;
+      position: absolute;
+      top: 100%;
+      right: -5%;
+      background: #fff;
+      margin: 4px 0 0;
+      overflow: hidden;
+
+      @media screen and (max-width: 1024px) {
+        right: 0;
+      }
+
+
+      .DateRangePicker_picker {
+        position: relative;
+        top: auto!important;
+        left: auto!important;
+        right: auto!important;
+        padding: 0 0 40px;
+      }
+      .DateRangePickerInput {
+        margin: 0 auto;
+        width: 258px;
+        display: flex;
+        justify-content: space-between;
+        border: 0;
+        padding: 30px 0 0;
+      }
+      .DateRangePickerInput_arrow {
+        display: none;
+      }
+
+      .DateInput {
+        width: 117px;
+      }
+
+      .DateInput_fang {
+        display: none;
+      }
+
+      .DateInput_input {
+        border-radius: 5px;
+        border: 1px solid #CAD5DA;
+        background: #fff;
+        max-width: 100%;
+        height: 30px;
+        font-size: 15px;
+        color: #2C2C2C;
+        padding: 0 15px ;
+      }
+
+      .DateInput_screenReaderMessage  {
+        display: none;
+      }
+
+      .DateRangePicker {
+        width: 100%;
+      }
+
+      .DayPicker.DayPicker__withBorder {
+        width: 318px!important;
+        max-width: 100%;
+        overflow: hidden;
+        box-shadow: none;
+      }
+
+      .DayPicker_transitionContainer {
+        max-height: 280px;
+        border-radius: 5px;
+      }
+
+      .CalendarMonthGrid_month__horizontal {
+        width: 300px!important;
+      }
+      .CalendarMonth {
+        padding: 0!important;
+      }
+
+      .CalendarMonth_table {
+        margin: 0 auto;
+      }
+
+      .DayPickerNavigation {
+        height: 0;
+        line-height: 0;
+      }
+      .DayPickerNavigation_button__horizontalDefault {
+        top: 26px;
+        font-size: 10px;
+      }
+
+      .DayPickerNavigation_rightButton__horizontalDefault {
+        right: 325px;
+        transform: rotate(180deg);
+      }
+      .DayPickerNavigation_leftButton__horizontalDefault {
+        left: 25px;
+      }
+
+      .CalendarMonth_caption {
+        padding: 30px 0 49px;
+        font-size: 14px;
+        color: #2C2C2C;
+        font-weight: 500;
+      }
+
+      .DayPicker_weekHeader {
+        top: 75px;
+        padding: 0 0px;
+
+        &:first-child {
+          left: 25px!important;
+        }
+        &:nth-child(2) {
+          left: 325px!important;
+        }
+      }
+      .DayPicker_weekHeader_li {
+        width: 30px!important;
+        margin: 0 3px!important;
+      }
+
+      .DayPicker_weekHeader_li {
+        text-transform: uppercase;
+        color: #8D8D8D;
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      .CalendarDay__outside ,
+      .CalendarDay__default {
+        font-size: 14px;
+        color: #8D8D8D;
+        border: 0;
+        vertical-align: middle;
+      }
+      .CalendarDay {
+        height: 30px!important;
+        width: 36px!important;
+
+        & > span {
+          width: 30px;
+          height: 100%;
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          span {
+            min-width: 15px;
+            display: inline-block;
+            text-align: right;
+          }
+        }
+      }
+
+      .CalendarDay {
+        background: transparent;
+      }
+
+      .CalendarDay__selected_end ,
+      .CalendarDay__selected_start {
+        background: transparent;
+        position: relative;
+        z-index: 1;
+
+        & > span {
+          background: linear-gradient(to top, #4FACFE, #03EFFE);
+          border-radius: 5px;
+          color: #fff;
+        }
+      }
+
+      .CalendarDay__selected_start {
+        z-index: 11;
+      }
+
+      .CalendarDay__selected_start + .CalendarDay__hovered_span ,
+      .CalendarDay__selected_start + .CalendarDay__selected_span {
+        position: relative;
+
+        & > span {
+          position: relative;
+
+          &:before {
+            content: '';
+            display: block;
+            width: 9px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 100%;
+            bottom: 0;
+            background: rgba(36, 210, 254, 0.4);
+          }
+        }
+      }
+
+      .CalendarDay__selected_start + .CalendarDay__selected_end {
+        z-index: 1;
+        & > span {
+          position: relative;
+
+          &:before {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 100%;
+            position: absolute;
+            left: -9px;
+            top: 0;
+            bottom: 0;
+            background: rgba(36, 210, 254, 0.4);
+            z-index: -1;
+          }
+        }
+      }
+
+
+      .CalendarDay__selected_span ,
+      .CalendarDay__hovered_span {
+        background: transparent!important;
+        color: #fff;
+
+        &:hover {
+          background: transparent
+        }
+
+        & > span {
+          position: relative;
+          background: rgba(36, 210, 254, 0.4);
+
+          &:after {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            bottom: 0;
+            background: rgba(36, 210, 254, 0.4);
+
+          }
+        }
+        &:last-child {
+          & > span {
+            &:after {
+              content: none;
+            }
+          }
+        }
+
+      }
+
+      .CalendarDay__last_in_range {
+        & > span {
+          &:after {
+            width: 9px;
+          }
+        }
+      }
+
+
+      .DayPickerKeyboardShortcuts_panel ,
+      .DayPickerKeyboardShortcuts_buttonReset {
+        display: none;
+      }
+    }
+
+    &__footer {
+      width: 258px;
+      margin: 0 auto;
+      position: relative;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+
+    &__submit {
+      background: linear-gradient(to top, #4FACFE, #03EFFE);
+      border: 0;
+      border-radius: 5px;
+      outline: none;
+      height: 30px;
+      min-width: 60px;
+      padding: 0 5px;
+      color: #fff;
+      position: absolute;
+      bottom: 20px;
+      z-index: 50;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+
+      &:disabled {
+        cursor: default;
+        opacity: .7;
+      }
+    }
+  }
+
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    padding: 40px 50px 80px;
+
+    @media screen and (max-width: 1679px) {
+      padding: 40px 50px 30px;
+    }
+    @media screen and (max-width: 1300px) {
+      padding: 40px 25px 30px;
+    }
+
+    .Footer {
+      padding: 0 50px 0;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    margin: 0 0 90px;
+
+    &_list {
+      display: flex;
+      margin: 0 -50px 0 0;
+      justify-content: space-between;
+
+      @media screen and (max-width: 1679px) {
+        margin: 0;
+        flex-wrap: wrap;
+      }
+      @media screen and (max-width: 1024px) {
+        margin: 0;
+        flex-wrap: nowrap;
+      }
+      @media screen and (max-width: 990px) {
+        flex-wrap: wrap;
+      }
+      @media screen and (max-width: 479px) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__keywords ,
+  &__transacted-projects {
+    width: calc(50% - 25px);
+    background: #fff;
+    box-shadow: 0px 0px 40px 0 rgba(202, 213, 218, 0.45);
+  }
+
+  &__keywords {
+    .graph__container {
+      display: flex;
+      align-items: center;
+      height: calc(100% - 70px);
+
+      .node> circle, text {
+        cursor: pointer;
+      }
+      .description {
+
+        h2 {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  &__keywords ,
+  &__transacted-projects {
+    box-shadow: 0 0 40px 0 #CAD5DA;
+    border-radius: 5px;
+
+    @media screen and (max-width: 1679px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: calc(100% - 30px);
+      // margin: 0 auto;
+    }
+
+    .Dashboard__widget_title {
+      margin: 0 0 50px;
+      font-size: 20px;
+      color: #2C2C2C;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__keywords {
+    padding: 30px 20px 35px 30px;
+
+    @media screen and (max-width: 1679px) {
+      margin: 0 0 50px;
+    }
+    @media screen and (max-width: 1024px) {
+      margin: 0 auto 40px;
+      padding: 26px 20px 25px ;
+    }
+
+    &:hover {
+      .custom-scroll .inner-handle {
+        opacity: .8;
+      }
+    }
+  }
+
+  &__transacted-projects {
+    padding: 30px 30px 20px 30px;
+
+    @media screen and (max-width: 1024px) {
+      margin: 0 auto;
+    }
+
+    .chart__inner {
+      position: relative;
+    }
+
+    .artifact_total_info {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      position: absolute;
+      top: -30px;
+      right: 0;
+      background: rgba(255,255,255,.5);
+      box-shadow: 0 0 30px 1px #fff;
+
+      .numbers {
+        text-align: center;
+        font-size: 35px;
+        line-height: 42px;
+      }
+      .description {
+        text-transform: uppercase;
+        font-size: 10px;
+        line-height: 14px;
+        max-width: 55px;
+      }
+    }
+    .chart_title {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      h2 {
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 24px;
+        color: #2C2C2C;
+      }
+        ul {
+          display: flex;
+          align-items: center;
+          border-radius: 5px;
+          border: 1px solid #CAD5DA;
+          height: 30px;
+          font-size: 15px;
+          color: #8D8D8D;
+          font-weight: 500;
+          font-family: 'Raleway', sans-serif;
+
+          @media screen and (max-width: 768px) {
+            height: 20px;
+            font-size: 10px;
+            border-radius: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            padding: 0 3px;
+            justify-content: space-around;
+          }
+        li {
+          min-width: 50px;
+          padding: 0 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+          cursor: pointer;
+          height: 100%;
+
+          @media screen and (max-width: 768px) {
+            min-width: 35px;
+          }
+
+          &.active {
+            background: linear-gradient(to top, #4FACFE, #03EFFE);
+            height: 30px;
+            font-weight: bold;
+            color: #fff;
+            min-width: 50px;
+
+            @media screen and (max-width: 768px) {
+              height: 27px;
+            }
+          }
+        }
+
+      }
+    }
+
+    .Dashboard__transacted-projects_svg {
+      margin: -45px 0 -30px -30px;
+
+       @media screen and (max-width: 1679px) {
+         margin: -45px 0 0px -30px;
+       }
+       @media screen and (max-width: 768px) {
+         margin: 0px 0 -10px -30px;
+       }
+     }
+  }
+
+
+}

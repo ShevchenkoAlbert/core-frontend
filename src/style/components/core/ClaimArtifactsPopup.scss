@@ -1,0 +1,126 @@
+.ClaimArtifactsPopup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 150;
+
+  &.popup-content {
+    &-enter {
+      .ClaimArtifactsPopup__overlay {
+        opacity: 1;
+      }
+
+      .ClaimArtifactsPopup__content {
+        right: 0vw;
+      }
+    }
+
+    &-enter-done {
+      .ClaimArtifactsPopup__overlay {
+        opacity: 1;
+      }
+
+      .ClaimArtifactsPopup__content {
+        right: 0vw;
+      }
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(44, 44, 44, 0.6);
+    opacity: 0;
+    transition: opacity .3s ease-in-out .2s;
+  }
+
+  &__content {
+    width: 760px;
+    max-width: 80%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -100vw;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 40px 0 rgba(44, 44, 44, 0.5);
+    transition: .3s ease-in-out 0s;
+
+    .ArtifactsPage__contributor_tags-list {
+      padding: 1px 0 0;
+    }
+    .ArtifactsPage__contributor_head {
+      padding: 30px 30px 20px 72px;
+    }
+  }
+
+  &__scroll-wrapper {
+    height: calc(100% - 150px);
+    padding: 15px 0 0;
+  }
+
+  .content-wrapper {
+    padding: 0;
+  }
+
+
+  &__bottom-panel {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(202, 213, 218, .95);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0;
+
+    p {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      color: rgb(123, 129, 128);
+
+      span {
+        font-family: Roboto, sans-serif;
+      }
+    }
+
+    .GradientButton {
+      margin: 0 0 0 20px;
+    }
+  }
+
+
+  &__cancel {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: rgb(123, 129, 128);
+    border: 0;
+    outline: 0;
+    background: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0 15px;
+    transition: background .3s linear;
+
+    &:hover {
+      background: rgba(0,0,0,.03);
+    }
+  }
+
+  .ArrowButton {
+    bottom: calc(43px + 70px);
+    position: absolute;
+  }
+}

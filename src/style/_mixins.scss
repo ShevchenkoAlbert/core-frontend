@@ -1,0 +1,84 @@
+// $color1: #1fa79f; // #26bcb3
+
+
+
+// @mixin wrapper {
+// 	max-width: $wrapper;
+// 	margin: 0 auto;
+// 	padding-left: 40px;
+// 	padding-right: 40px;
+//
+// 	@media screen and (max-width: 991px) {
+// 		padding-right: 30px;
+// 		padding-left: 30px;
+// 	}
+//
+// 	@media screen and (max-width: 767px) {
+// 		padding-right: 15px;
+// 		padding-left: 15px;
+// 	}
+//
+// 	@media screen and (max-width: 479px) {
+// 		padding-right: 10px;
+// 		padding-left: 10px;
+// 	}
+// }
+//
+// .wrapper {
+// 	@include wrapper;
+// }
+
+@mixin btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	white-space: nowrap;
+	flex-shrink: 0;
+	text-align: center;
+	border: none;
+	outline: none;
+}
+
+@mixin placeholder($color, $size: 16px){
+	::-webkit-input-placeholder {
+	  color: $color;
+	  font-size: $size;
+		transition: color 0.3s ease-in-out 0.3s;
+	}
+	:-moz-placeholder {
+	  color: $color;
+	  font-size: $size;
+		transition: color 0.3s ease-in-out 0.3s;
+	}
+	::-moz-placeholder {
+	  color: $color;
+	  font-size: $size;
+		transition: color 0.3s ease-in-out 0.3s;
+	}
+	:-ms-input-placeholder {
+	  color: $color;
+	  font-size: $size;
+		transition: color 0.3s ease-in-out 0.3s; 
+	}
+}
+
+
+
+@mixin retina($pixel-ratio) {
+	@media screen and (min-device-pixel-ratio: $pixel-ratio) {
+		@content;
+	}
+}
+
+// @mixin respond-to($media) {
+//   @if $media == handhelds {
+//     @media only screen and (max-width: $small) { @content; }
+//   }
+//   @else if $media == medium-screens {
+//     @media only screen and (min-width: $small + 1) and (max-width: $large - 1) { @content; }
+//   }
+//   @else if $media == wide-screens {
+//     @media only screen and (min-width: $large) { @content; }
+//   }
+// }

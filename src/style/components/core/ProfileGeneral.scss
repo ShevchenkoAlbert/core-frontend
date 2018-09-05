@@ -1,0 +1,302 @@
+.ProfileGeneral {
+  padding: 30px 0 140px;
+  position: relative;
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -25px;
+
+    @media screen and (max-width: 768px) {
+      margin: 0;
+    }
+  }
+
+  &__col {
+    margin: 0 25px;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+      margin: 0 0px;
+    }
+
+    &--first {
+      text-align: center;
+      width: 200px;
+      flex-shrink: 0;
+      margin: 0 auto 40px;
+    }
+    &--thrid ,
+    &--second {
+      width: calc( (100% - 200px) / 2 - 75px);
+
+      @media screen and (max-width: 1340px) {
+        width: calc( (100% - 200px) - 100px);
+      }
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    &--thrid {
+      @media screen and (max-width: 1340px) {
+        margin: 0 25px 0 auto;
+      }
+    }
+  }
+
+  &__photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 10px;
+    border: solid 1px rgb(202, 213, 218);
+
+    &_img {
+      object-fit: cover;
+
+      &.default {
+        max-width: 100px;
+        max-height: 100px;
+      }
+    }
+  }
+
+  &__change-photo ,
+  &__add-email {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(79, 172, 254);
+    cursor: pointer;
+  }
+
+
+  &__add-email {
+    margin: 0 0 30px;
+  }
+
+  &__change-photo {
+    input[type="file"] {
+      display: none;
+  }
+  }
+
+  &__actions-content {
+    background-color: rgba(44, 44, 44, .9);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
+  .InputField {
+    &.InputField__label {}
+
+    .InputField__label_text {}
+
+    .InputField__input {
+      height: 60px;
+      padding: 0 30px;
+    }
+    .InputField__changeMail {
+      color: #7b8180;
+      margin-top: 5px;
+      font-size: 14px;
+      line-height: 16px;
+      a {
+        text-decoration: none;
+        color: #49b4fe;
+      }
+    }
+    textarea.InputField__input {
+      resize: vertical;
+      height: 165px;
+      border-radius: 5px;
+      border: solid 1px rgb(202, 213, 218);
+      padding: 20px 30px;
+    }
+
+    .InputField__eye {
+      top: 42px;
+    }
+
+    &.new-password {
+      .InputField__eye {
+        top: 22px;
+      }
+    }
+
+  }
+
+
+  &__email-list {
+    #email {
+      color: #7b8180;
+    }
+    .InputField:last-child {
+      margin: 0 0 20px;
+    }
+  }
+
+  &__actions-btn {
+    border-radius: 0;
+    height: 70px;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+    padding: 0 50px;
+
+    &.discard {
+      font-weight: 500;
+      background: rgba(0, 0, 0, 0);
+
+      &:hover {
+        background: rgba(0, 0, 0, .1);
+      }
+    }
+
+    &.preview {
+      background-color: rgba(255, 255, 255, .15);
+
+      &:hover {
+        background-color: rgba(255, 255, 255, .05);
+      }
+    }
+    &.save {
+      &:disabled {
+        opacity: .7;
+      }
+    }
+
+    &.BlueGradientButton {
+      margin: 0;
+    }
+  }
+
+  &__checkPrivacy {
+    margin: 0 0 47px;
+  }
+
+  .auth__checkPrivacy_text {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.33;
+    color: rgb(44, 44, 44);
+
+    span {
+      display: inline-block;
+      margin: 5px 0 0;
+      opacity: 0.6;
+      font-weight: 500;
+      color: rgb(123, 129, 128);
+    }
+  }
+
+  .auth__PasswordValidation {
+    .PasswordValidationInfo__item p {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.67;
+      letter-spacing: 0.8px;
+      color: rgb(123, 129, 128);
+    }
+  }
+
+  .subText {
+    text-transform: lowercase;
+    color: rgb(176, 179, 179);
+    margin: 0 0 0 5px;
+  }
+
+  .Footer {
+    padding: 0 0 70px;
+  }
+}
+
+
+
+
+.ResearchTags {
+  margin: 0 0 50px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 10px 0 19px;
+    background: rgba(159, 188, 186, 0.25);
+    margin: 0 10px 10px 0;
+    border-radius: 31px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(44, 44, 44);
+  }
+
+  &__text {
+    display: inline-block;
+    margin: 0 15px 0 0;
+  }
+
+  &__delete {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    cursor: pointer;
+
+    &:after ,
+    &:before {
+      content: '';
+      display: block;
+      width: 15px;
+      height: 1px;
+      background: #9fbcba;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform-origin: 50% 50%;
+    }
+
+    &:after {
+      transform: rotate(45deg);
+    }
+    &:before {
+      transform: rotate(-45deg);
+    }
+  }
+
+
+}
+.row-for-button {
+  display: flex;
+  flex-flow: row nowrap;
+  .additionalEmails-input {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .additionalEmails-remove {
+    background-image: url('../../../img/remove_icon.svg');
+    background-color: #fff;
+    width: 23px;
+    height: 23px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+  };
+};

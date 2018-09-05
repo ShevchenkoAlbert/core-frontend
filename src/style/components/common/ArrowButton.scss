@@ -1,0 +1,38 @@
+.ArrowButton {
+  width: 59px;
+  height: 59px;
+  background-color: rgb(202, 213, 218);
+  //background-color: rgb(102, 113, 118);
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.16);
+  position: fixed;
+  bottom: 43px;
+  right: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  cursor: pointer;
+  will-change: auto;
+  transform: translateZ(0);
+  transition: box-shadow .2s ease-in-out,
+              opacity .5s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 23.6px;
+    height: 13.1px;
+    margin: 0 0 2px;
+    background: url("../../../img/arrow.svg");
+    background-size: cover;
+  }
+}

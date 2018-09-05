@@ -1,0 +1,58 @@
+.GradientButton {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.9px;
+  color: rgb(255, 255, 255);
+  border: 0;
+  outline: 0;
+  height: 40px;
+  min-width: 96px;
+  padding: 0 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, rgb(3, 239, 254), rgb(79, 172, 254));
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, #16b8dc, #0289ff);
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+
+  &:hover {
+    &:after {
+      opacity: .7;
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+
+    &:hover {
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+}
